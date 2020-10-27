@@ -133,8 +133,8 @@ client.on("userUpdate", async (oldUser, newUser) => {
   if (oldUser.username !== newUser.username) {
   const tag = 'Ṷ' //Tag
   const sunucu = '𐌵 𐌽 ί 𐌕 𐍅' //Sunucu
-  const kanal = '766627370194829352' //Kanal
-  const rol = '766627320218779659' //Rol
+  const kanal = '770767652036542494' //Kanal
+  const rol = '770767795829997658' //Rol
   
   try { 
   if (newUser.username.includes(tag) && !client.guilds.cache.get(sunucu).members.cache.get(newUser.id).roles.cache.has(rol)) {

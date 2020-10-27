@@ -2,14 +2,15 @@ const Discord = require('discord.js');
 const db = require('quick.db');
 
 exports.run = async(client, message, args) => {
-   if(!message.member.roles.cache.has('766627328846987286'))  //Kayıt yetkilisi rolü  ID
+   if(!message.member.roles.cache.has('770766698386554880'))  //Kayıt yetkilisi rolü  ID
   return message.channel.send('Bu komutu kullanabilmek için gerekli yetkiye sahip değilsin ')
    let member = message.mentions.users.first() || client.users.cache.get(args.join(' '))
    if(!member) {
        return message.channel.send('Bir kişi etiketlemelisin')
    }
 //Burayı Doldur
-   let Erkek = message.guild.roles.cache.find(r => r.id === '766627321720864778') //Erkek
+   let Erkek = message.guild.roles.cache.find(r => r.id === '770755590187778109') //Erkek
+//   let uye = message.guild.roles.cache.find(r => r.id === '770755588867096607') //Üye rolü
    let kayıtsız = message.guild.roles.cache.find(r => r.id === '770765085572464650') // Kayıtsız
 //Burayı Doldur
    if(!Erkek) {
@@ -27,6 +28,7 @@ exports.run = async(client, message, args) => {
 
    kayıt.setNickname(`V ${isim} | ${yas}`)
    kayıt.roles.add(Erkek)
+ //  kayıt.roles.add(uye)
    kayıt.roles.remove(kayıtsız)
    let embed = new Discord.MessageEmbed()
    .setColor('GREEN')
