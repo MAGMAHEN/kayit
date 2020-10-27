@@ -1,16 +1,21 @@
 {
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
+  "//1": "Bu Altyapı Tamamen Devtr'ye Aittir.",
+  "//2": "https://discord.gg/xhyQXPN",
   "name": "hello-express",
   "version": "0.0.1",
-  "description": "A simple Node app built on Express, instantly up and running.",
-  "main": "server.js",
+  "description": "Bu Altyapı Tamamen Devtr'ye Codeye Aittir.",
+  "main": "discord.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node discord.js"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "discord.js": "^12.4.0",
+    "chalk": "^4.1.0",
+    "moment": "^2.29.1",
+    "jimp": "^0.16.1",
+    "quick.db": "^7.1.2",
+    "snekfetch": "^4.0.4"
   },
   "engines": {
     "node": "12.x"
