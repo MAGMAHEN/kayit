@@ -9,8 +9,8 @@ exports.run = async(client, message, args) => {
        return message.channel.send('Bir kişi etiketlemelisin')
    }
 //Burayı Doldur
-   let Kız = message.guild.roles.cache.find(r => r.id === '766627320953831444') // Kız rolü
-   let kayıtsız = message.guild.roles.cache.find(r => r.id === '766627322547404810') //Kayıtsız 
+   let Kız = message.guild.roles.cache.find(r => r.id === '770755589160042518') // Kız rolü
+   let kayıtsız = message.guild.roles.cache.find(r => r.id === '770765085572464650') //Kayıtsız 
 //Burayı Doldur
    if(!Kız) {
        return message.channel.send('Kız rolü ayarlanmamış veya rol aranırken bir hata oluştu logu kontrol et')

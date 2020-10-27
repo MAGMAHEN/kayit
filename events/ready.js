@@ -20,7 +20,6 @@ module.exports = client => {
     "❤️𐌵 𐌽 ί 𐌕 𐍅❤️",
     "𐌵 𐌽 ί 𐌕 𐍅❤️OUZ",
     
-
   ];
 
   setInterval(function() {

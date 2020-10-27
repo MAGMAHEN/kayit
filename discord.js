@@ -131,8 +131,8 @@ client.login(ayarlar.token);
 
 client.on("userUpdate", async (oldUser, newUser) => {
   if (oldUser.username !== newUser.username) {
-  const tag = 'Λ' //Tag
-  const sunucu = 'Λ P O L L O N' //Sunucu
+  const tag = 'Ṷ' //Tag
+  const sunucu = '𐌵 𐌽 ί 𐌕 𐍅' //Sunucu
   const kanal = '766627370194829352' //Kanal
   const rol = '766627320218779659' //Rol
   
@@ -160,16 +160,16 @@ client.guilds.cache.get(sunucu).members.cache.get(ayarlar.sahip).send(`Oto Tag �
 
 client.on("guildMemberAdd", async (member) => {
 moment.locale("tr");
-let kanal = client.channels.cache.get(`766627364724932608`) //Kayıt Kanalı ID
-await kanal.send(`>>>  ${member} Sunucumuza Hoş Geldin! \n\n Seninle Birlikte ${member.guild.memberCount} Kişiyiz\n\n Birazdan <@&766627328846987286> Rolündeki Yetkililer Sizi Kayıt Edecek Lütfen Bekleyin\n\n Hesabın Oluşturulma Tarihi: ${moment(member.user.createdAt).format("DD MMMM YYYY, dddd (hh:mm)")}\n\n **__${member.guild.name}__** `, new Discord.MessageAttachment("https://media1.tenor.com/images/b9f1d46f94c316fa28a348410ba05718/tenor.gif"," kayit.gif")).catch(e => console.log(e))
+let kanal = client.channels.cache.get(`770755702401663016`) //Kayıt Kanalı ID
+await kanal.send(`>>>  ${member} Sunucumuza Hoş Geldin! \n\n Seninle Birlikte ${member.guild.memberCount} Kişiyiz\n\n Birazdan <@&770766698386554880> Rolündeki Yetkililer Sizi Kayıt Edecek Lütfen Bekleyin\n\n Hesabın Oluşturulma Tarihi: ${moment(member.user.createdAt).format("DD MMMM YYYY, dddd (hh:mm)")}\n\n **__${member.guild.name}__** `, new Discord.MessageAttachment("https://media1.tenor.com/images/b9f1d46f94c316fa28a348410ba05718/tenor.gif"," kayit.gif")).catch(e => console.log(e))
 }); 
  
 
 //
 
 client.on("guildMemberAdd", member => {
-let botrol = '766627323172487200' //Bot otorol          //DevTR
-let üyerol = '766627322547404810'//Kullanıcı otorol
+let botrol = '770755592821145662' //Bot otorol          //DevTR
+let üyerol = '770765085572464650'//Kullanıcı otorol
   if (member.user.bot) {
   member.roles.add(botrol) 
  } else {
