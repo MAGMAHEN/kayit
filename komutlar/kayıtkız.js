@@ -10,7 +10,7 @@ exports.run = async(client, message, args) => {
    }
 //Burayı Doldur
    let Kız = message.guild.roles.cache.find(r => r.id === '770755589160042518')// Kız rolü
- //  let uye = message.guild.roles.cache.find(r => r.id === '770755588867096607') //Üye rolü
+   let uye = message.guild.roles.cache.find(r => r.id === '770755588867096607') //Üye rolü
    let kayıtsız = message.guild.roles.cache.find(r => r.id === '770765085572464650') //Kayıtsız 
 //Burayı Doldur
    if(!Kız) {
@@ -26,9 +26,9 @@ exports.run = async(client, message, args) => {
    if(!isim) return message.channel.send('İsim belirtmelisin')
    if(isNaN(yas)) return message.channel.send('Yaş belirtmelisin')
 
-   kayıt.setNickname(`V ${isim} ${yas}`)
+   kayıt.setNickname(`${isim} ${yas}`)
    kayıt.roles.add(Kız)
- //  kayıt.roles.add(uye)
+   kayıt.roles.add(uye)
    kayıt.roles.remove(kayıtsız)
    let embed = new Discord.MessageEmbed()
    .setColor('GREEN')
@@ -37,7 +37,7 @@ exports.run = async(client, message, args) => {
    .addField('Adı :', isim)
    .addField('Yaşı :', yas)
    .addField('Kayıt eden yetkili', message.author)
-   client.channels.cache.get('766627364724932608').send(embed)
+   client.channels.cache.get('770755702401663016').send(embed)
 }
 
 exports.conf = {
