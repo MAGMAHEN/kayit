@@ -15,10 +15,10 @@ module.exports = client => {
       client.user.username
     } ismi ile giriş yapıldı!`
   );
-  client.user.setStatus("IDLE");
+  client.user.setStatus("dnd");
   var oyun = [
     "❤️𐌵 𐌽 ί 𐌕 𐍅❤️",
-    "𐌵 𐌽 ί 𐌕 𐍅❤️OUZ",
+    "𐌵 𐌽 ί 𐌕 𐍅❤️O U Z",
     
   ];
 
