@@ -176,20 +176,3 @@ let üyerol = '770765085572464650'//Kullanıcı otorol
 member.roles.add(üyerol) 
 };
 });
-let tarih = require('moment');
-require('moment-duration-format')
-client.on('message', async message => {
-if(!message.guild) return;
-if(client.commands.get(message.content.replace(ayarlar.prefix, ''))) return;
-let kontrol = await db.fetch(`devtr.afk.${message.author.id}`)
-if(kontrol) {
-message.channel.send(`Hey ${message.author}, başarıyla AFK modundan çıktın.\nAFK kaldığın süre: **${moment.duration(Date.now() - kontrol.zaman).format('W [hafta], D [gün], H [saat], m [dakika], s [saniye]')}**`)
-db.delete(`devtr.afk.${message.author.id}`)
-return;
-}
-if(message.mentions.users.size > 0) {
-let kişi = message.mentions.users.first();
-let afk = await db.get(`devtr.afk.${kişi.id}`)
-if(!afk) return;
-message.channel.send(`**${kişi.tag}** adlı kullanıcı **${moment.duration(Date.now() - afk.zaman).format('W [hafta], D [gün], H [saat], m [dakika], s [saniye]')}** süredir **${afk.sebep}** sebebiyle AFK modunda.`)
-}})
