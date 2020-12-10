@@ -178,7 +178,7 @@ member.roles.add(üyerol)
 });
 client.on("message", async (message) => {
 if(message.author.bot || message.channel.type === "dm") return;
-  let Msj = message.guild.channels.find(c => c.name === "mesaj-log")
+  let Msj = message.guild.channels.find(c => c.name === "log")
   let msj = new Discord.RichEmbed()
   .setColor("GREEN")
   .setAuthor(`Mesaj Gönderildi`, message.author.avatarURL)
@@ -194,7 +194,7 @@ if(message.author.bot || message.channel.type === "dm") return;
 
 client.on("messageUpdate", async (oldMessage, newMessage) => {
 if(newMessage.author.bot || newMessage.channel.type === "dm") return;
-  let Msj = newMessage.guild.channels.find(c => c.name === "mesaj-log")
+  let Msj = newMessage.guild.channels.find(c => c.name === "log")
   if (Msj.content == newMessage.content) return;
   let msj = new Discord.RichEmbed()
   .setColor("GREEN")
@@ -212,7 +212,7 @@ if(newMessage.author.bot || newMessage.channel.type === "dm") return;
 
 client.on("messageDelete", async (deletedMessage) => {
 if(deletedMessage.author.bot || deletedMessage.channel.type === "dm") return;
-  let Msj = deletedMessage.guild.channels.find(c => c.name === "mesaj-log")
+  let Msj = deletedMessage.guild.channels.find(c => c.name === "log")
   let msj = new Discord.RichEmbed()
   .setColor("GREEN")
   .setAuthor(`Mesaj Silindi`, deletedMessage.author.avatarURL)
