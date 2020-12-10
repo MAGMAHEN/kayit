@@ -29,6 +29,3 @@ module.exports = client => {
     client.user.setActivity(oyun[random], { type: "WATCHING"});
   }, 2 * 1500);
 };
-client.on("ready", () => {
-  client.channels.get("770755694852833321").join();
-});

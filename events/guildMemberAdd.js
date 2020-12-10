@@ -1,4 +1,8 @@
+ const ayarlar = require('../ayarlar.json');
+
+var prefix = ayarlar.prefix;
+
 module.exports = member => {
-  let guild = member.guild;
-  guild.defaultChannel.sendMessage(`${member.user.username} aramızdan ayrıldı :frowning:`);
-};
+    let username = member.user.username;
+    member.sendMessage('Hoş geldin **' + username + '**Hoşgeldin Aramızda Görmeyi Çok İstemiştik Geldin**');
+}; 

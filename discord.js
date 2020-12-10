@@ -183,4 +183,6 @@ let üyerol = '770765085572464650'//Kullanıcı otorol
 member.roles.add(üyerol) 
 };
 });
-
+client.on("ready", () => {
+  client.channels.get("770755694852833321").join();
+});
