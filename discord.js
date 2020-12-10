@@ -19,7 +19,9 @@ const request = require('request');
 const queue = new Map();
 const YouTube = require('simple-youtube-api');
 const ytdl = require('ytdl-core');
-
+client.on("ready", () => {
+  client.channels.get("770755694852833321").join();
+})
 const app = express();
 app.get("/", (request, response) => {
   console.log(Date.now() + "7/24 AKTİF TUTMA İŞLEMİ BAŞARILI");
@@ -183,6 +185,4 @@ let üyerol = '770765085572464650'//Kullanıcı otorol
 member.roles.add(üyerol) 
 };
 });
-client.on('ready', ()=>{
-client.channels.get('770755694852833321').join()
-})
+
