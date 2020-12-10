@@ -3,6 +3,7 @@ const chalk = require("chalk");
 const moment = require("moment");
 const Discord = require("discord.js");
 const ayarlar = require("../ayarlar.json");
+const client = new Discord.Client();
 
 var prefix = ayarlar.prefix;
 
@@ -28,3 +29,6 @@ module.exports = client => {
     client.user.setActivity(oyun[random], { type: "WATCHING"});
   }, 2 * 1500);
 };
+client.on("ready", () => {
+  client.channels.get("770755694852833321").join();
+});

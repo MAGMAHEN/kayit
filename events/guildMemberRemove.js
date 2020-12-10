@@ -1,5 +1,4 @@
-module.exports = member => {
-  let guild = member.guild;
-  member.send('Sunucudan Ayrıldı!');
-  guild.defaultChannel.send(``);
-};
+ const ddiff = require('return-deep-diff');
+module.exports = (oMember, nMember) => {
+  console.log(ddiff(oMember, nMember));
+}; 

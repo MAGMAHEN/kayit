@@ -19,9 +19,7 @@ const request = require('request');
 const queue = new Map();
 const YouTube = require('simple-youtube-api');
 const ytdl = require('ytdl-core');
-client.on("ready", () => {
-  client.channels.get("770755694852833321").join();
-})
+
 const app = express();
 app.get("/", (request, response) => {
   console.log(Date.now() + "7/24 AKTİF TUTMA İŞLEMİ BAŞARILI");
@@ -141,7 +139,7 @@ client.login(ayarlar.token);
 client.on("userUpdate", async (oldUser, newUser) => {
   if (oldUser.username !== newUser.username) {
   const tag = 'Ṷ' //Tag
-  const sunucu = '𐌵 𐌽 ί 𐌕 𐍅' //Sunucu
+  const sunucu = '736187402384572426' //Sunucu
   const kanal = '770767652036542494' //Kanal
   const rol = '770767795829997658' //Rol
   
