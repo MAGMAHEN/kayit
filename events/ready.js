@@ -19,7 +19,7 @@ module.exports = client => {
   client.user.setStatus("dnd");
   var oyun = [
     "❤️𐌵 𐌽 ί 𐌕 𐍅❤️",
-    "𐌵 𐌽 ί 𐌕 𐍅❤️O U Z",
+    "𐌵 𐌽 ί 𐌕 𐍅❤️Ø U Z",
     
   ];
 
@@ -27,5 +27,5 @@ module.exports = client => {
     var random = Math.floor(Math.random() * (oyun.length - 0 + 1) + 0);
 
     client.user.setActivity(oyun[random], { type: "WATCHING"});
-  }, 2 * 1500);
+  }, 5000);
 };
