@@ -16,7 +16,7 @@ module.exports = client => {
       client.user.username
     } ismi ile giriş yapıldı!`
   );
-  client.user.setStatus("dnd");
+  client.user.setStatus("online");
   var oyun = [
     "❤️𐌵 𐌽 ί 𐌕 𐍅❤️",
     "𐌵 𐌽 ί 𐌕 𐍅❤️Ø U Z",
