@@ -138,10 +138,10 @@ client.login(ayarlar.token);
 
 client.on("userUpdate", async (oldUser, newUser) => {
   if (oldUser.username !== newUser.username) {
-  const tag = 'Ṷ' //Tag
+  const tag = 'Λ' //Tag
   const sunucu = '736187402384572426' //Sunucu
-  const kanal = '770767652036542494' //Kanal
-  const rol = '770767795829997658' //Rol
+  const kanal = '789178636354715718' //Kanal
+  const rol = '789178522114588703' //Rol
   
   try { 
   if (newUser.username.includes(tag) && !client.guilds.cache.get(sunucu).members.cache.get(newUser.id).roles.cache.has(rol)) {
@@ -167,15 +167,14 @@ client.guilds.cache.get(sunucu).members.cache.get(ayarlar.sahip).send(`Oto Tag �
 //
 
 client.on("guildMemberAdd", member => {
-let botrol = '789178528377733120' //Bot otorol          //DevTR
-let üyerol = '789178527374770197'//Kullanıcı otorol
+let botrol = '789178528377733120'          //DevTR
+let üyerol = '789178527374770197'
   if (member.user.bot) {
-  member.roles.add(botrol) 
+  member.addRole(botrol) 
  } else {
-member.roles.add(üyerol) 
+member.addRole(üyerol) 
 };
 });
-
 client.on("guildMemberAdd", member => {
   const kanal = "789178630038880286"; //kişi geldiği zaman mesaj atılacak kanal id
   moment.locale("tr");// Saat icin gerekli
@@ -185,7 +184,7 @@ client.on("guildMemberAdd", member => {
       member +
       "** Hoş Geldin! **\n\n **Seninle Birlikte " +
       member.guild.memberCount +
-      " Kişiyiz!** \n\n< **Kayıt işleminin başlaması için,<@&KAYIT YETKİLİSİ ID> yetkililerini etiketleyip ses teyit odalarına geçebilirsin.**  \n\n **Hesabın Oluşturulma Tarihi :** " +
+      " Kişiyiz!** \n\n< **Kayıt işleminin başlaması için,<@&789178533628608533> yetkililerini etiketleyip ses teyit odalarına geçebilirsin.**  \n\n **Hesabın Oluşturulma Tarihi :** " +
       moment(member.user.createdAt).format("DD MMMM YYYY, dddd  hh:mm:ss ") +
       " \n\n **Kayıt işlemin tamamlanırken ölüm ile yaşam arasında ki çizgiyi takip et! **",
     new Discord.Attachment(
@@ -195,5 +194,5 @@ client.on("guildMemberAdd", member => {
 });
 
 client.on("ready", () => {
-  client.channels.cache.get("770755694852833321").join();
+  client.channels.cache.get("791280347547566080").join();
 })
