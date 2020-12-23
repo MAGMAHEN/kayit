@@ -162,26 +162,36 @@ client.guilds.cache.get(sunucu).members.cache.get(ayarlar.sahip).send(`Oto Tag �
 
 
 //
-
-
-
-client.on("guildMemberAdd", async (member) => {
-moment.locale("tr");
-let kanal = client.channels.cache.get(`770755702401663016`) //Kayıt Kanalı ID
-await kanal.send(`>>>  ${member} Sunucumuza Hoş Geldin! \n\n Seninle Birlikte ${member.guild.memberCount} Kişiyiz\n\n Birazdan <@&770766698386554880> Rolündeki Yetkililer Sizi Kayıt Edecek Lütfen Bekleyin\n\n Hesabın Oluşturulma Tarihi: ${moment(member.user.createdAt).format("DD MMMM YYYY, dddd (hh:mm)")}\n\n **__${member.guild.name}__** `, new Discord.MessageAttachment("https://media1.tenor.com/images/b9f1d46f94c316fa28a348410ba05718/tenor.gif"," kayit.gif")).catch(e => console.log(e))
-}); 
  
 
 //
 
 client.on("guildMemberAdd", member => {
-let botrol = '770755592821145662' //Bot otorol          //DevTR
-let üyerol = '770765085572464650'//Kullanıcı otorol
+let botrol = '789178528377733120' //Bot otorol          //DevTR
+let üyerol = '789178527374770197'//Kullanıcı otorol
   if (member.user.bot) {
   member.roles.add(botrol) 
  } else {
 member.roles.add(üyerol) 
 };
+});
+
+client.on("guildMemberAdd", member => {
+  const kanal = "789178630038880286"; //kişi geldiği zaman mesaj atılacak kanal id
+  moment.locale("tr");// Saat icin gerekli
+  let samet = client.channels.get(kanal);
+  samet.send(
+    " " +
+      member +
+      "** Hoş Geldin! **\n\n **Seninle Birlikte " +
+      member.guild.memberCount +
+      " Kişiyiz!** \n\n< **Kayıt işleminin başlaması için,<@&KAYIT YETKİLİSİ ID> yetkililerini etiketleyip ses teyit odalarına geçebilirsin.**  \n\n **Hesabın Oluşturulma Tarihi :** " +
+      moment(member.user.createdAt).format("DD MMMM YYYY, dddd  hh:mm:ss ") +
+      " \n\n **Kayıt işlemin tamamlanırken ölüm ile yaşam arasında ki çizgiyi takip et! **",
+    new Discord.Attachment(
+      "https://cdn.discordapp.com/attachments/583680695293968404/601813274090274836/giphy.gif"
+    )
+  );
 });
 
 client.on("ready", () => {
