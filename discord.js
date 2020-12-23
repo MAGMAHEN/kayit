@@ -175,6 +175,23 @@ let üyerol = '789178527374770197'
 member.addRole(üyerol) 
 };
 });
+require("moment-duration-format");
+
+client.on('guildMemberAdd', async devtr => {
+let sunucu = `736187402384572426` //Verilcek Rolün Olduğu Sunucunun ID'sini girin.
+let rol = `789178525000138773` //Verilcek Rol ID
+let kanal = `789178669124812802` //Fake Bildirim Log Kanalı ID.
+let gün = 15 //Bu günden önce giren hesaplar ceza yer.
+let hesap = moment.duration(new Date().getTime() - devtr.user.createdAt.getTime()).format('DD')
+if(gün < hesap) return client.channels.get(kanal).send(`**${devtr.user.tag}** isimli kullanıcı sunucuya giriş yaptı, hesabı **${gün}** günden sonra açıldığı için kullanıcıya **dokunulmadı**.`)
+devtr.guild.members.get(devtr.id).roles.forEach(r => {
+devtr.guild.members.get(devtr.id).removeRole(r)
+
+})
+
+devtr.addRole(rol)
+client.channels.get(kanal).send(`**${devtr.user.tag}** adlı kullanıcı sunucuya giriş yaptı, hesabı **${gün}** günden önce açıldığı için kullanıcıya \`${client.guilds.get(sunucu).roles.get(rol).name}\` adlı rol **verildi**.`)
+});
 client.on("guildMemberAdd", member => {
   const kanal = "789178630038880286"; //kişi geldiği zaman mesaj atılacak kanal id
   moment.locale("tr");// Saat icin gerekli
