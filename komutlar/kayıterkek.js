@@ -2,16 +2,16 @@ const Discord = require('discord.js');
 const db = require('quick.db');
 
 exports.run = async(client, message, args) => {
-   if(!message.member.roles.cache.has('770766698386554880'))  //Kayıt yetkilisi rolü  ID
+   if(!message.member.roles.cache.has('789178533628608533'))  //Kayıt yetkilisi rolü  ID
   return message.channel.send('Bu komutu kullanabilmek için gerekli yetkiye sahip değilsin ')
    let member = message.mentions.users.first() || client.users.cache.get(args.join(' '))
    if(!member) {
        return message.channel.send('Bir kişi etiketlemelisin')
    }
 //Burayı Doldur
-   let Erkek = message.guild.roles.cache.find(r => r.id === '770755590187778109') //Erkek
+   let Erkek = message.guild.roles.cache.find(r => r.id === '789178526619533373') //Erkek
    let uye = message.guild.roles.cache.find(r => r.id === '770755588867096607') //Üye rolü
-   let kayıtsız = message.guild.roles.cache.find(r => r.id === '770765085572464650') // Kayıtsız
+   let kayıtsız = message.guild.roles.cache.find(r => r.id === '789178527374770197') // Kayıtsız
 //Burayı Doldur
    if(!Erkek) {
        return message.channel.send('Erkek rolü ayarlanmamış veya rol aranırken bir hata oluştu logu kontrol et')
@@ -37,7 +37,7 @@ exports.run = async(client, message, args) => {
    .addField('Adı :', isim)
    .addField('Yaşı :', yas)
    .addField('Kayıt eden yetkili', message.author)
-   client.channels.cache.get('770755702401663016').send(embed)
+   client.channels.cache.get('789178630038880286').send(embed)
 }
 
 exports.conf = {
