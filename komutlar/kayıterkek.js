@@ -10,7 +10,7 @@ exports.run = async(client, message, args) => {
    }
 //Burayı Doldur
    let Erkek = message.guild.roles.cache.find(r => r.id === '789178526619533373') //Erkek
-   let uye = message.guild.roles.cache.find(r => r.id === '791275847121109033') //Üye rolü
+   let uye = message.guild.roles.cache.find(r => r.id === '770755588867096607') //Üye rolü
    let kayıtsız = message.guild.roles.cache.find(r => r.id === '789178527374770197') // Kayıtsız
 //Burayı Doldur
    if(!Erkek) {
@@ -30,19 +30,16 @@ exports.run = async(client, message, args) => {
    kayıt.roles.add(Erkek)
    kayıt.roles.add(uye)
    kayıt.roles.remove(kayıtsız)
-  const embed = new Discord.RichEmbed()
-    .setDescription("Kayıt İşlemi Başarılı")
-    .setColor("GREEN")
-    .addField(":star: Yetkili", message.author)
-    .setTimestamp()
-    .addField(":star: Kaydedilen Üye", member)
-    .setTimestamp()
-    .addField(`:star: Verilen Rol`, message.guild.roles.get('791275847121109033','789178526619533373'))
-    .setTimestamp()
-    //.addField(`:star: Alınan Rol`, message.guild.roles.get(arol))
-    .setFooter("© Register");
-  message.channel.send(embed);
-  
+   let embed = new Discord.MessageEmbed()
+   .setColor('GREEN')
+   .setTitle('Kayıt Tamamlandı')
+   .addField('Kayıt edilen kullanıcı',member)
+   .addField('Adı :', isim)
+   .addField('Yaşı :', yas)
+   .addField('Kayıt eden yetkili', message.author)
+   client.channels.cache.get('789178630038880286').send(embed)
+}
+
 exports.conf = {
     enabled: true,
     guildOnly: false,
@@ -52,6 +49,6 @@ exports.conf = {
 
 exports.help = {
     name: "kayıt-erkek"
-}}
+}
 //Editlersiniz Kendiniz
  
