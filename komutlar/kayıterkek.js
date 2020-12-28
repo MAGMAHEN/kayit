@@ -37,7 +37,7 @@ exports.run = async(client, message, args) => {
     .setTimestamp()
     .addField(":star: Kaydedilen Üye", member)
     .setTimestamp()
-    .addField(`:star: Verilen Rol`, message.guild.roles.get('791275847121109033'))
+    .addField(`:star: Verilen Rol`, message.guild.roles.get('791275847121109033','789178526619533373'))
     .setTimestamp()
     //.addField(`:star: Alınan Rol`, message.guild.roles.get(arol))
     .setFooter("© Register");

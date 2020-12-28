@@ -10,7 +10,7 @@ exports.run = async(client, message, args) => {
    }
 //Burayı Doldur
    let Kız = message.guild.roles.cache.find(r => r.id === '789178526099701811')// Kız rolü
-   let uye = message.guild.roles.cache.find(r => r.id === '770755588867096607') //Üye rolü
+   let uye = message.guild.roles.cache.find(r => r.id === '791275847121109033') //Üye rolü
    let kayıtsız = message.guild.roles.cache.find(r => r.id === '789178527374770197') //Kayıtsız 
 //Burayı Doldur
    if(!Kız) {
@@ -37,7 +37,7 @@ exports.run = async(client, message, args) => {
     .setTimestamp()
     .addField(":star: Kaydedilen Üye", member)
     .setTimestamp()
-    .addField(`:star: Verilen Rol`, message.guild.roles.get(vrol))
+    .addField(`:star: Verilen Rol`, message.guild.roles.get('791275847121109033','789178526099701811'))
     .setTimestamp()
     //.addField(`:star: Alınan Rol`, message.guild.roles.get(arol))
     .setFooter("© Register");
@@ -52,4 +52,4 @@ exports.conf = {
 
 exports.help = {
     name: "kayıt-kız"
-}
+}}
